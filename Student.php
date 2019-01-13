@@ -20,4 +20,14 @@ class Student {
         $this->emails = array();
         $this->grades = array();
     }
+    
+    //Setting email addresses
+    function add_email($which, $address) {
+        $this->emails[$which] = $address;
+    }
+    
+    //Setting grades addresses
+    function add_grade($grade) {
+        $this->grades[] = grade;
+    }
 }

@@ -21,9 +21,9 @@ class Student {
         $this->grades = array();
     }
     
-    //Setting email addresses
+    //Setting email address
     function add_email($which, $address) {
-        $this->emails[$which] = $address;
+     $this->emails[$which] = $address;
     }
     
     //Setting grades
@@ -40,12 +40,12 @@ class Student {
         return $total / count($this->grades);
     }
     
-    //Formatting text
+    //Formatting output
     function toString() {
-        $result = $this->first_name . ' ' . $this->surname;
-        $result .= ' (' . $this->average() . ")\n";
+        $result = print "$this->first_name $this->surname:";
+        $result = "Average Grade    | " . $this->average() . "\n";
         foreach ($this->emails as $which => $what) {
-            $result .= $which . ': ' . $what . "\n";
+            $result .= $which . '       | ' . $what . "\n";
         }
         $result .= "\n";
         return '<pre>' . $result . '</pre>';
